@@ -34,7 +34,7 @@ main(["todos" | _]) ->
     lists:foreach(
         fun({_Num, Mod}) ->
             io:format("~n--- Practica ~s (~p) ---~n", [_Num, Mod]),
-            catch Mod:run(["demo"])
+            catch Mod:run(args_demo(_Num))
         end,
         practicas());
 main([NumStr | Resto]) ->
@@ -53,3 +53,10 @@ uso() ->
     io:format("Uso: ejercicios <numero> [args...]~n"),
     io:format("     ejercicios todos~n"),
     io:format("Practicas disponibles: 3 al 13~n").
+
+
+%% Datos de ejemplo para el modo "todos".
+args_demo("7") -> ["28"];
+args_demo("8") -> ["18"];
+args_demo("9") -> ["29"];
+args_demo(_)   -> ["demo"].
