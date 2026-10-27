@@ -134,7 +134,38 @@ practicas-erlang/
 
 ## Evidencias
 
+### Practica 3
+<img width="1053" height="698" alt="image" src="https://github.com/user-attachments/assets/bb2fb980-2932-4979-afe6-37ee694e189d" />
 
+### Practica 4
+<img width="1043" height="836" alt="image" src="https://github.com/user-attachments/assets/571d839e-2790-4440-8f5f-bb937390e6e8" />
+
+### Practica 5
+<img width="1016" height="408" alt="image" src="https://github.com/user-attachments/assets/484e375d-e8de-4c0f-be23-596993897154" />
+
+### Practica 6
+<img width="1026" height="692" alt="image" src="https://github.com/user-attachments/assets/f0725016-3da4-403c-9547-e5b882574dff" />
+
+### Practica 7
+<img width="1020" height="207" alt="image" src="https://github.com/user-attachments/assets/fb9080be-5c6d-49e1-ae14-ae6b178f07ce" />
+
+### Practica 8
+<img width="1037" height="186" alt="image" src="https://github.com/user-attachments/assets/227339d2-6a34-4841-8b1a-5eb4a75afcfd" />
+
+### Practica 9
+<img width="996" height="182" alt="image" src="https://github.com/user-attachments/assets/d94c1be9-95ba-49a4-8513-1985aeafc4c3" />
+
+### Practica 10
+<img width="1022" height="838" alt="image" src="https://github.com/user-attachments/assets/f7886351-24f1-4f5d-9b83-7020a442c8c3" />
+
+### Practica 11
+<img width="1026" height="301" alt="image" src="https://github.com/user-attachments/assets/aef69af2-b28f-46f5-a92a-549be8b5e796" />
+
+### Practica 12
+<img width="1097" height="257" alt="image" src="https://github.com/user-attachments/assets/02354849-f92e-4b9e-8b0f-61e96c2b6b8e" />
+
+### Practica 13
+<img width="1023" height="231" alt="image" src="https://github.com/user-attachments/assets/90da6ee2-19b8-41e1-93bf-49d14c70e4ac" />
 
 ---
 
