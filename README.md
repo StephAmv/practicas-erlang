@@ -1,8 +1,8 @@
 # Practicas Erlang OTP — Problemas 3 al 13
 
-## Autora
-
-**Stephanie Ariana Medrano Vargas** — No. de lista 29
+**Asignatura:** Programación lógica y funcional - 04:00 pm  
+**Alumno:** Stephanie Ariana Medrano Vargas - 23212013  
+**Fecha:** 28/010/2026
 
 ## Descripcion
 
@@ -12,6 +12,22 @@ Proyecto Erlang/OTP con Rebar3 que implementa 11 practicas del libro
 
 Cada practica vive en su propio modulo `src/pNN_nombre.erl`, exporta `run/1`
 y cuenta con pruebas EUnit en `test/ejercicios_tests.erl`.
+
+## Como funciona
+
+- **Un modulo por problema.** La logica del problema esta en funciones puras
+  (faciles de probar) y `run/1` se encarga de leer los datos e imprimir el resultado.
+- **Un solo punto de entrada.** `ejercicios.erl` es el escript que recibe el numero
+  de practica y sus datos, y llama al modulo correspondiente.
+- **Tres formas de dar los datos:**
+  1. Como argumento: `ejercicios 7 28`
+  2. Por teclado, si no se escribe ningun argumento (practicas 7 al 13)
+  3. Con la palabra `demo`, que usa un conjunto de ejemplo (practicas 10 al 13)
+- **Validacion.** Si faltan datos, sobran, o un valor no es valido, el programa
+  muestra un mensaje de error en lugar de fallar.
+- **Aplicacion OTP.** El proyecto incluye `ejercicios_app` y `ejercicios_sup`
+  (un supervisor sin hijos), ya que las practicas son programas de consola y no
+  necesitan procesos persistentes.
 
 ---
 
@@ -82,6 +98,15 @@ rebar3 escriptize
 | 12  | p12_mayor_de_15   | Encontrar el entero positivo mayor en una lista de quince enteros        |
 | 13  | p13_segundo_mayor | Determinar el segundo entero mas grande en quince enteros positivos      |
 
+### Notas sobre algunos enunciados
+
+- **Practica 5:** la tabla empieza en 2^0 = 1 y termina en 2^9 = 512, porque 2^10 = 1024 ya excede 1,000.
+- **Practica 11:** el cero no es positivo ni negativo, por eso se cuenta aparte.
+- **Practica 13:** se toma el segundo valor *distinto*. Si el mayor se repite (por ejemplo `9 9 5`),
+  el segundo mayor es `5`. Si todos los valores son iguales, se indica que no existe.
+- **Salida en consola:** se imprime sin acentos ni enie para evitar problemas de
+  codificacion en terminales remotas.
+
 ---
 
 ## Estructura de carpetas
@@ -93,6 +118,7 @@ practicas-erlang/
 ├── rebar.config               # Configuracion de Rebar3
 ├── docs/
 │   └── pNN_nombre.md          # Documentacion individual por practica
+├── prompts/                   # Prompts usados con OpenCode
 ├── src/
 │   ├── ejercicios.app.src     # Descriptor OTP de la aplicacion
 │   ├── ejercicios.erl         # Punto de entrada escript (main/1)
@@ -103,3 +129,31 @@ practicas-erlang/
 └── test/
     └── ejercicios_tests.erl   # Suite EUnit de todos los problemas
 ```
+
+---
+
+## Evidencias
+
+
+
+---
+
+## Declaracion de uso de IA
+
+Este proyecto se desarrollo con apoyo de inteligencia artificial, y se declara a continuacion.
+
+| Aspecto | Detalle |
+|---------|---------|
+| Agente de programacion | OpenCode.AI CLI en modo Agente (Build), sobre WSL |
+| Modelos | Claude de Anthropic (Haiku 5.5 y Sonnet 4.6) |
+| Asistente de apoyo | Claude (Anthropic), para preparar el flujo de trabajo, las reglas de `AGENTS.md` y los prompts de `prompts/` |
+
+**Que hizo la IA:** genero el codigo de los modulos, las pruebas EUnit y la documentacion
+a partir de los prompts guardados en `prompts/`, siguiendo las reglas de `AGENTS.md`.
+
+**Que hice yo:** elegi los problemas, compile el proyecto, ejecute las pruebas y corri cada
+programa para comprobar sus resultados. Tambien detecte y corregi un fallo en el modo
+`todos` (las practicas 7, 8 y 9 se ejecutaban sin dato) y organice el repositorio y los commits.
+
+Los prompts utilizados estan en la carpeta [`prompts/`](prompts/) para que el proceso
+sea reproducible.
